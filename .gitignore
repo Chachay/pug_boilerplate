@@ -102,3 +102,19 @@ dist
 
 # TernJS port file
 .tern-port
+
+# private
+src/*
+!src/.gitkeep
+!src/examples/
+src/examples/*.css
+src/examples/*.js
+
+imgs/*
+!imgs/.gitkeep
+
+dest/*
+!dest/.gitkeep
+
+_private/*
+!_private/.gitkeep
