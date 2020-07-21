@@ -11,7 +11,7 @@ gulp.task('pug', () => {
     .pipe(gulp.dest('./dest/'))
 })
 gulp.task('watch', () => {
-  return gulp.watch(['./src/*.pug', './_template/*.pug', './_private/*.pug'], gulp.series(['pug']))
+  return gulp.watch(['./src/*.pug', './src/**/*.pug', './_template/*.pug', './_private/*.pug'], gulp.series(['pug']))
 })
 gulp.task('default', () => {
   return gulp.parallel(['pug'])
