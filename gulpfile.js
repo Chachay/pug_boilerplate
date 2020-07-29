@@ -2,10 +2,12 @@ const gulp = require('gulp')
 const pug = require('gulp-pug')
 const inlineSource = require('gulp-inline-source')
 const inlineImages = require('gulp-inline-images')
+const { mathjaxify } = require('gulp-mathjaxify')
 
 gulp.task('pug', () => {
   return gulp.src(['./src/*.pug', './src/**/*.pug', '!./_**/*', '!./node_modules/**/*'])
     .pipe(pug({ pretty: true }))
+    .pipe(mathjaxify({ output: 'html' }))
     .pipe(inlineSource())
     .pipe(inlineImages({ basedir: './img/' }))
     .pipe(gulp.dest('./dest/'))

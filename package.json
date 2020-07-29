@@ -25,5 +25,8 @@
     "lodash": "^4.17.19",
     "lodash.template": "^4.5.0",
     "pug": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-mathjaxify": "^1.0.0"
   }
 }
